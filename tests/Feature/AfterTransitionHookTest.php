@@ -15,8 +15,7 @@ class AfterTransitionHookTest extends TestCase
     use RefreshDatabase;
     use WithFaker;
 
-    /** @test */
-    public function should_call_after_transition_hooks()
+        public function test_should_call_after_transition_hooks()
     {
         //Arrange
         Queue::fake();
@@ -38,8 +37,7 @@ class AfterTransitionHookTest extends TestCase
         Queue::assertPushed(AfterTransitionJob::class);
     }
 
-    /** @test */
-    public function should_not_call_after_transition_hooks_if_not_defined()
+        public function test_should_not_call_after_transition_hooks_if_not_defined()
     {
         //Arrange
         Queue::fake();

@@ -17,8 +17,7 @@ class PendingTransitionExecutorTest extends TestCase
     use RefreshDatabase;
     use WithFaker;
 
-    /** @test */
-    public function should_apply_pending_transition()
+        public function test_should_apply_pending_transition()
     {
         //Arrange
         $salesManager = factory(SalesManager::class)->create();
@@ -55,8 +54,7 @@ class PendingTransitionExecutorTest extends TestCase
         $this->assertFalse($salesOrder->status()->hasPendingTransitions());
     }
 
-    /** @test */
-    public function should_fail_job_automatically_if_starting_transition_is_not_the_same_as_when_postponed()
+        public function test_should_fail_job_automatically_if_starting_transition_is_not_the_same_as_when_postponed()
     {
         //Arrange
         $salesOrder = factory(SalesOrder::class)->create();

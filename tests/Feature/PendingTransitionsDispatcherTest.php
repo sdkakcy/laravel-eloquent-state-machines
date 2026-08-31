@@ -23,8 +23,7 @@ class PendingTransitionsDispatcherTest extends TestCase
         Queue::fake();
     }
 
-    /** @test */
-    public function should_dispatch_pending_transition()
+        public function test_should_dispatch_pending_transition()
     {
         //Arrange
         $salesOrder = factory(SalesOrder::class)->create();
@@ -48,8 +47,7 @@ class PendingTransitionsDispatcherTest extends TestCase
         });
     }
 
-    /** @test */
-    public function should_not_dispatch_future_pending_transitions()
+        public function test_should_not_dispatch_future_pending_transitions()
     {
         //Arrange
         $salesOrder = factory(SalesOrder::class)->create();

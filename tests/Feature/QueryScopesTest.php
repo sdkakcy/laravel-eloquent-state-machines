@@ -13,8 +13,7 @@ class QueryScopesTest extends TestCase
     use RefreshDatabase;
     use WithFaker;
 
-    /** @test */
-    public function can_get_models_with_transition_responsible_model()
+        public function test_can_get_models_with_transition_responsible_model()
     {
         //Arrange
         $salesManager = factory(SalesManager::class)->create();
@@ -41,8 +40,7 @@ class QueryScopesTest extends TestCase
         });
     }
 
-    /** @test */
-    public function can_get_models_with_transition_responsible_id()
+        public function test_can_get_models_with_transition_responsible_id()
     {
         //Arrange
         $salesManager = factory(SalesManager::class)->create();
@@ -64,8 +62,7 @@ class QueryScopesTest extends TestCase
         $this->assertEquals(1, $salesOrders->count());
     }
 
-    /** @test */
-    public function can_get_models_with_specific_transition()
+        public function test_can_get_models_with_specific_transition()
     {
         //Arrange
         $salesOrder = factory(SalesOrder::class)->create();
@@ -89,8 +86,7 @@ class QueryScopesTest extends TestCase
         $this->assertEquals($salesOrder->id, $salesOrders->first()->id);
     }
 
-    /** @test */
-    public function can_get_models_with_specific_transition_to_state()
+        public function test_can_get_models_with_specific_transition_to_state()
     {
         //Arrange
         $salesOrder = factory(SalesOrder::class)->create();
@@ -114,8 +110,7 @@ class QueryScopesTest extends TestCase
         $this->assertEquals($salesOrder->id, $salesOrders->first()->id);
     }
 
-    /** @test */
-    public function can_get_models_with_an_array_of_transition_to_states()
+        public function test_can_get_models_with_an_array_of_transition_to_states()
     {
         //Arrange
         $salesOrder = factory(SalesOrder::class)->create();
@@ -143,8 +138,7 @@ class QueryScopesTest extends TestCase
         $this->assertEquals($salesOrder2->id, $salesOrders[1]->id);
     }
 
-    /** @test */
-    public function can_get_models_with_specific_transition_from_state()
+        public function test_can_get_models_with_specific_transition_from_state()
     {
         //Arrange
         $salesOrder = factory(SalesOrder::class)->create();
@@ -168,8 +162,7 @@ class QueryScopesTest extends TestCase
         $this->assertEquals($salesOrder->id, $salesOrders->first()->id);
     }
 
-    /** @test */
-    public function can_get_models_with_an_array_of_transition_from_states()
+        public function test_can_get_models_with_an_array_of_transition_from_states()
     {
         //Arrange
         $salesOrder = factory(SalesOrder::class)->create();
@@ -197,8 +190,7 @@ class QueryScopesTest extends TestCase
         $this->assertEquals($anotherSalesOrder2->id, $salesOrders[1]->id);
     }
 
-    /** @test */
-    public function can_get_models_with_specific_transition_custom_property()
+        public function test_can_get_models_with_specific_transition_custom_property()
     {
         //Arrange
         $salesOrder = factory(SalesOrder::class)->create();
@@ -221,8 +213,7 @@ class QueryScopesTest extends TestCase
         $this->assertEquals($salesOrder->id, $salesOrders->first()->id);
     }
 
-    /** @test */
-    public function can_get_models_using_multiple_state_machines_transitions()
+        public function test_can_get_models_using_multiple_state_machines_transitions()
     {
         //Arrange
         $salesOrder = factory(SalesOrder::class)->create();

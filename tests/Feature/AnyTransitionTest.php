@@ -15,8 +15,7 @@ class AnyTransitionTest extends TestCase
     use RefreshDatabase;
     use WithFaker;
 
-    /** @test */
-    public function can_transition_to_any_state()
+        public function test_can_transition_to_any_state()
     {
         //Arrange
         $salesOrder = SalesOrderWithToAny::create();
@@ -36,8 +35,7 @@ class AnyTransitionTest extends TestCase
         $this->assertEquals('approved', $salesOrder->status);
     }
 
-    /** @test */
-    public function can_transition_from_any_state()
+        public function test_can_transition_from_any_state()
     {
         //Arrange
         $salesOrder = SalesOrderWithFromAny::create();
@@ -57,8 +55,7 @@ class AnyTransitionTest extends TestCase
         $this->assertEquals('approved', $salesOrder->status);
     }
 
-    /** @test */
-    public function can_transition_from_any_to_any_state()
+        public function test_can_transition_from_any_to_any_state()
     {
         //Arrange
         $salesOrder = SalesOrderWithAnyToAny::create();

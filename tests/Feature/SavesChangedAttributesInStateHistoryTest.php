@@ -13,8 +13,7 @@ class SavesChangedAttributesInStateHistoryTest extends TestCase
     use RefreshDatabase;
     use WithFaker;
 
-    /** @test */
-    public function should_save_changed_attributes_when_transitioning_state()
+        public function test_should_save_changed_attributes_when_transitioning_state()
     {
         //Arrange
         $salesOrder = SalesOrder::create([
@@ -50,8 +49,7 @@ class SavesChangedAttributesInStateHistoryTest extends TestCase
         $this->assertEquals('approved', $lastStateTransition->changedAttributeNewValue('status'));
     }
 
-    /** @test */
-    public function should_save_changed_attributes_on_initial_state()
+        public function test_should_save_changed_attributes_on_initial_state()
     {
         //Act
         $salesOrder = SalesOrder::create([
