@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-eloquent-state-machines` will be documented in this file
 
+## v6.2.0 - 2026-09-01
+* Laravel 13.x Compatibility
+* PHPUnit 13.x Compatibility
+
 ## v6.0.0 - 2024-08-22
 * Laravel 11.x Compatibility
 
