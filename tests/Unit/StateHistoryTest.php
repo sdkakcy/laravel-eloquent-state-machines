@@ -12,8 +12,7 @@ class StateHistoryTest extends TestCase
     use RefreshDatabase;
     use WithFaker;
 
-    /** @test */
-    public function can_get_custom_property()
+        public function test_can_get_custom_property()
     {
         //Arrange
         $comments = $this->faker->sentence;
@@ -31,8 +30,7 @@ class StateHistoryTest extends TestCase
         $this->assertEquals($comments, $result);
     }
 
-    /** @test */
-    public function can_get_all_custom_properties()
+        public function test_can_get_all_custom_properties()
     {
         //Arrange
         $customProperties = [
